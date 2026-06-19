@@ -70,7 +70,8 @@
   .print-area { display: none; }
 
   @media print {
-    body { background: #fff; }
+    @page { margin: 0; size: A4; }
+    body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .form-area { display: none !important; }
     .print-area { display: block !important; }
   }
